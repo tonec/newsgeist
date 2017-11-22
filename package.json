@@ -1,0 +1,41 @@
+{
+  "name": "newsgeist",
+  "version": "1.0.0",
+  "description": "Newsgeist api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "pretest": "eslint .",
+    "test": "cross-env LOG_LEVEL=error mocha --recursive --reporter spec --exit ./test/specs/",
+    "debug": "cross-env LOG_LEVEL=debug node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tonec/newsgeist.git"
+  },
+  "author": "Tony Coop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonec/newsgeist/issues"
+  },
+  "homepage": "https://github.com/tonec/newsgeist#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0",
+    "winston": "^3.0.0-rc1"
+  },
+  "dependencies": {
+    "dtrace-provider": "^0.8.5",
+    "restify": "^6.3.4",
+    "restify-errors": "^5.0.0",
+    "restify-jwt-community": "^1.0.0"
+  }
+}
