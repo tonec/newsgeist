@@ -34,6 +34,9 @@
   },
   "dependencies": {
     "dtrace-provider": "^0.8.5",
+    "mongoose": "^4.13.4",
+    "mongoose-string-query": "^0.2.5",
+    "mongoose-timestamp": "^0.6.0",
     "restify": "^6.3.4",
     "restify-errors": "^5.0.0",
     "restify-jwt-community": "^1.0.0"
