@@ -26,7 +26,7 @@ server.use(restifyPlugins.fullResponse())
 server.use(jwt({ secret: config.JWT_SECRET }).unless({
   path: [
     config.basePath('/ping'),
-    config.basePath('/todos')
+    config.basePath('/threads')
   ]
 }))
 
@@ -46,6 +46,9 @@ server.listen(config.PORT, () => {
   db.once('open', () => {
     // Routes
     require('./routes')(server)
+
+    // Tasks
+    require('./tasks')(db)
 
     // Log when ready
     logger.info(`${MODULE_ID} ready. listening on PORT ${config.PORT}`)

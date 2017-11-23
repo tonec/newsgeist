@@ -4,7 +4,7 @@
   "description": "Newsgeist api",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "nodemon index",
     "pretest": "eslint .",
     "test": "cross-env LOG_LEVEL=error mocha --recursive --reporter spec --exit ./test/specs/",
     "debug": "cross-env LOG_LEVEL=debug node index.js"
@@ -39,6 +39,7 @@
     "mongoose-timestamp": "^0.6.0",
     "restify": "^6.3.4",
     "restify-errors": "^5.0.0",
-    "restify-jwt-community": "^1.0.0"
+    "restify-jwt-community": "^1.0.0",
+    "webhoseio": "^1.0.2"
   }
 }
