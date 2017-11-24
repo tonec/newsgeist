@@ -25,8 +25,7 @@ server.use(restifyPlugins.fullResponse())
 // secure all routes. except /ping
 server.use(jwt({ secret: config.JWT_SECRET }).unless({
   path: [
-    config.basePath('/ping'),
-    config.basePath('/threads')
+    config.basePath('/ping')
   ]
 }))
 
