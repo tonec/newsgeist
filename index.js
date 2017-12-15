@@ -3,6 +3,7 @@ const jwt = require('restify-jwt-community')
 const mongoose = require('mongoose')
 const restifyPlugins = require('restify').plugins
 const config = require('./config')
+const keys = require('./config/keys')
 const logger = require('./utils/logger')
 
 const MODULE_ID = 'app:main'
@@ -23,7 +24,7 @@ server.use(restifyPlugins.queryParser({ mapParams: true }))
 server.use(restifyPlugins.fullResponse())
 
 // secure all routes. except /ping
-server.use(jwt({ secret: config.JWT_SECRET }).unless({
+server.use(jwt({ secret: keys.JWT_SECRET }).unless({
   path: [
     config.basePath('/ping')
   ]
