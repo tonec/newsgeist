@@ -35,6 +35,8 @@
   "dependencies": {
     "@google-cloud/language": "^1.1.0",
     "dtrace-provider": "^0.8.5",
+    "lodash": "^4.17.4",
+    "lodash.sortby": "^4.7.0",
     "mongoose": "^4.13.4",
     "mongoose-string-query": "^0.2.5",
     "mongoose-timestamp": "^0.6.0",
